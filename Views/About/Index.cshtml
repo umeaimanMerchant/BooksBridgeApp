@@ -29,37 +29,43 @@
         <section class="section">
             <h2 class="section-title">Our Team</h2>
             <div class="team-grid">
+        
                 <div class="team-member">
                     <img src="~/img/priyanka.png" alt="Priyanka">
                     <h3>Priyanka</h3>
-                    <p>Frontend Developer</p>
-                    <p>Priyanka is responsible for the user interface and experience of BookBridge. She ensures that the platform is intuitive and easy to use for all users.</p>
+                    <p>Frontend Lead</p>
+                    <p>Priyanka led frontend design: crafted a clean UI, styled views, integrated API data into the interface, and developed interactive JavaScript features like modals for a smooth user experience.</p>
                 </div>
+        
                 <div class="team-member">
                     <img src="~/img/hriday.png" alt="Hriday">
                     <h3>Hriday</h3>
-                    <p>Data Visualization Specialist</p>
-                    <p>Hriday creates the interactive charts and visualizations that help users understand book trends and statistics. He has a passion for making data accessible and engaging.</p>
+                    <p>Deployment & DevOps Lead</p>
+                    <p>Hriday led Azure deployment: deployed the app on Azure, resolved deployment issues, managed GitHub merges, and organized the presentation slides and final materials.</p>
                 </div>
+        
                 <div class="team-member">
                     <img src="~/img/gopi.png" alt="Gopi">
                     <h3>Gopi</h3>
-                    <p>Backend Developer</p>
-                    <p>Gopi handles the server-side logic and database management for BookBridge. He ensures that the platform runs smoothly and efficiently.</p>
+                    <p>Data & Persistence Specialist</p>
+                    <p>Gopi managed data persistence: set up a singleton service for storing records, designed the final ERD, and supported development of the About Us page.</p>
                 </div>
+        
                 <div class="team-member">
-                    <img src="~/img/aiman.png" alt="Umeaiman">
-                    <h3>Umeaiman</h3>
-                    <p>CRUD Operations Specialist</p>
-                    <p>Umeaiman is responsible for implementing the Create, Read, Update, and Delete operations for books in the system. She ensures that users can easily manage their book collections.</p>
+                    <img src="~/img/aiman.png" alt="Himan">
+                    <h3>Himan</h3>
+                    <p>Backend Development Lead</p>
+                    <p>Himan led backend development: built the MVC structure, implemented CRUD operations with validation, and ensured robust backend logic throughout the platform.</p>
                 </div>
+        
             </div>
         </section>
+
 
         <section class="section">
             <h2 class="section-title">Logical Data Model</h2>
             <div class="data-model">
-                <img src="~/img/data-model.png" alt="Logical Data Model">
+                <img src="~/img/Entity Relationship Diagram.png" alt="Logical Data Model">
             </div>
             <div class="card mission-card">
                 <h3>Data Relationships</h3>
@@ -68,10 +74,6 @@
                     <li><strong>Users → Books:</strong> A single user can list multiple books for sharing.</li>
                     <li><strong>Books → Borrow Records:</strong> Each book can be borrowed multiple times, with every instance recorded.</li>
                     <li><strong>Users → Borrow Records:</strong> Each borrow record links both the borrower and the owner.</li>
-                    <li><strong>Books → Reviews:</strong> Multiple users can review the same book, providing feedback and ratings.</li>
-                    <li><strong>Users → Reviews:</strong> Users can write reviews for different books they have interacted with.</li>
-                    <li><strong>Books → Book Images:</strong> Each book can have multiple images, with one marked as primary.</li>
-                    <li><strong>Users → Preferences:</strong> Each user has a single preferences record storing favorite genres and notification settings.</li>
                 </ul>
                 <p>This relational setup enables BookBridge to handle user activity, book details, borrowing history, visual content, and personalized experiences effectively.</p>
             </div>
