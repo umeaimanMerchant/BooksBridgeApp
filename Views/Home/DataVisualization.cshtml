@@ -1,0 +1,152 @@
+@{
+    ViewData["Title"] = "Book List";
+}
+
+<main>
+    <div class="container">
+        <section class="section">
+            <h1 class="section-title">Book List</h1>
+            <p>This table displays details of books fetched from the Google Books API based on the search keyword.</p>
+
+            <div class="input-group mb-3">
+                <input type="text" id="searchKeyword" class="form-control" placeholder="Enter a keyword to search books">
+                <button class="btn btn-primary" onclick="loadBookData()">Search</button>
+            </div>
+
+            <table id="bookTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author(s)</th>
+                        <th>First Publish Year</th>
+                        <th>Preview Book</th>
+                    </tr>
+                </thead>
+                <tbody id="bookTableBody">
+                    <!-- Table rows will be added dynamically here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</main>
+
+@* @section Scripts {
+    <script>
+        async function loadBookData() {
+            const keyword = document.getElementById('searchKeyword').value.trim();
+            
+            if (!keyword) {
+                alert("Please enter a search keyword.");
+                return;
+            }
+
+            const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${keyword}&maxResults=10`;
+
+            const response = await fetch(apiUrl);
+
+            if (!response.ok) {
+                console.error('Failed to fetch data:', response.status);
+                return;
+            }
+
+            try {
+                const result = await response.json();
+                const books = result.items;
+
+                const tableBody = document.getElementById('bookTableBody');
+                tableBody.innerHTML = ''; // Clear any previous results
+
+                if (books && books.length > 0) {
+                    books.forEach(book => {
+                        const volumeInfo = book.volumeInfo;
+                        const title = volumeInfo.title || 'N/A';
+                        const authors = volumeInfo.authors ? volumeInfo.authors.join(', ') : 'N/A';
+                        const publishYear = volumeInfo.publishedDate ? volumeInfo.publishedDate.split('-')[0] : 'N/A';
+
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${title}</td>
+                            <td>${authors}</td>
+                            <td>${publishYear}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                } else {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td colspan="3">No results found for "${keyword}".</td>`;
+                    tableBody.appendChild(row);
+                }
+            } catch (error) {
+                console.error('Error parsing JSON:', error);
+            }
+        }
+
+        // Optionally, trigger search when 'Enter' key is pressed
+        document.getElementById('searchKeyword').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                loadBookData();
+            }
+        });
+    </script> *@
+    @section Scripts {
+    <script>
+        async function loadBookData() {
+            const keyword = document.getElementById('searchKeyword').value.trim();
+
+            if (!keyword) {
+                alert("Please enter a search keyword.");
+                return;
+            }
+
+            @* const apiUrl = `/Books/Search?keyword=${encodeURIComponent(keyword)}`; *@
+            const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(keyword)}&maxResults=10`;
+
+            const response = await fetch(apiUrl);
+
+            if (!response.ok) {
+                console.error('Failed to fetch data from server:', response.status);
+                return;
+            }
+
+            try {
+                const result = await response.json();
+                const books = result.items;
+
+                const tableBody = document.getElementById('bookTableBody');
+                tableBody.innerHTML = ''; // Clear old rows
+
+                if (books && books.length > 0) {
+                    books.forEach(book => {
+                        const volumeInfo = book.volumeInfo;
+                        const title = volumeInfo.title || 'N/A';
+                        const authors = volumeInfo.authors ? volumeInfo.authors.join(', ') : 'N/A';
+                        const publishYear = volumeInfo.publishedDate ? volumeInfo.publishedDate.split('-')[0] : 'N/A';
+                        const previousLink = volumeInfo.previewLink || 'N/A';
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${title}</td>
+                            <td>${authors}</td>
+                            <td>${publishYear}</td>
+                            <td><a href="${previousLink}" target="_blank">Preview</a></td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                } else {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td colspan="3">No results found for "${keyword}".</td>`;
+                    tableBody.appendChild(row);
+                }
+            } catch (error) {
+                console.error('Error parsing server response:', error);
+            }
+        }
+
+        document.getElementById('searchKeyword').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                loadBookData();
+            }
+        });
+    </script>
+}
+
+
