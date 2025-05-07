@@ -1,0 +1,171 @@
+@model IEnumerable<BookBridgeApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Read Books";
+}
+
+<main>
+    <div class="container">
+        <section class="section">
+            <h1 class="section-title">Available Books</h1>
+            <div class="card">
+                <p>Browse through our collection of books. You can filter by genre, availability, or search for specific titles.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card">
+                <form method="get" asp-action="Read">
+                    <div class="search-filters mb-3">
+                        <input type="text" name="searchTerm" placeholder="Search books..." class="form-control d-inline-block w-25 mr-2" value="@Context.Request.Query["searchTerm"]" />
+
+                        <select name="genreFilter" class="form-control d-inline-block w-25 mr-2">
+                            <option value="">All Genres</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Science Fiction">Science Fiction</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Biography">Biography</option>
+                            <option value="History">History</option>
+                        </select>
+
+                        <select name="statusFilter" class="form-control d-inline-block w-25">
+                            <option value="">All Status</option>
+                            <option value="Available">Available</option>
+                            <option value="Borrowed">Borrowed</option>
+                        </select>
+
+                        <button type="submit" class="btn btn-primary ml-2">Filter</button>
+                    </div>
+                </form>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Genre</th>
+                                <th>Condition</th>
+                                <th>Location</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var book in Model)
+                            {
+                                <tr>
+                                    <td>@book.Title</td>
+                                    <td>@book.Author</td>
+                                    <td>@book.Genre</td>
+                                    <td>@book.Condition</td>
+                                    <td>@book.Location</td>
+                                    <td>@book.Description</td>
+                                    <td>
+                                        <span id="status-@book.Id">
+                                            @if (book.Availability?.ToLower() == "available")
+                                            {
+                                                <button class="btn btn-sm btn-primary" 
+                                                    id="borrow-button-@book.Id" 
+                                                    onclick="openBorrowModal(@book.Id, '@Html.Raw(System.Text.Encodings.Web.JavaScriptEncoder.Default.Encode(book.UserName))', '@Html.Raw(System.Text.Encodings.Web.JavaScriptEncoder.Default.Encode(book.Location))', '@Html.Raw(System.Text.Encodings.Web.JavaScriptEncoder.Default.Encode(book.Phone))')">
+                                                    Borrow Book
+                                                </button>
+                                            }
+                                            
+                                            else
+                                            {
+                                                <span class="badge bg-secondary">Checked Out</span>
+                                            }
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div class="center-button">
+            <a asp-controller="Books" asp-action="Create" class="btn btn-sm btn-primary">Add a book</a>
+        </div>
+        <br>
+    </div>
+</main>
+
+<div id="borrowModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeBorrowModal()">&times;</span>
+        <h3>Borrow Book</h3>
+        <p><strong>User Name:</strong> <span id="modalUserName"></span></p>
+        <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+        <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+
+        <button id="confirmBorrowBtn" class="btn btn-success" onclick="checkoutBook()">Confirm Borrow</button>
+    </div>
+</div>
+
+<style>
+    .modal { position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; 
+        overflow: auto; background-color: rgba(0,0,0,0.4); }
+    .modal-content { background-color: #fff; margin: 15% auto; padding: 20px; 
+        border: 1px solid #888; width: 400px; border-radius: 8px; }
+    .close { float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+</style>
+
+@section Scripts {
+<script>
+    let selectedBookId = null;
+
+    function openBorrowModal(bookId, userName, location, phone) {
+        selectedBookId = bookId;
+        document.getElementById("modalUserName").innerText = userName;
+        document.getElementById("modalLocation").innerText = location;
+        document.getElementById("modalPhone").innerText = phone;
+        document.getElementById("borrowModal").style.display = "block";
+    }
+
+    function closeBorrowModal() {
+        document.getElementById("borrowModal").style.display = "none";
+    }
+
+    function checkoutBook() {
+        if (selectedBookId == null) {
+            alert("No book selected.");
+            return;
+        }
+
+        fetch(`/Books/Checkout`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ bookId: selectedBookId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById(`status-${selectedBookId}`).innerHTML = '<span class="badge bg-secondary">Checked Out</span>';
+                const borrowButton = document.getElementById(`borrow-button-${selectedBookId}`);
+                if (borrowButton) {
+                    borrowButton.disabled = true;
+                }
+            } else {
+                alert(data.message);
+            }
+            closeBorrowModal();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("There was an error while checking out the book.");
+        });
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById("borrowModal");
+        if (event.target == modal) {
+            closeBorrowModal();
+        }
+    }
+</script>
+}

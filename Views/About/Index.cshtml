@@ -1,0 +1,89 @@
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<main>
+    <div class="container">
+        <section class="section">
+            <h1 class="section-title">About BookBridge</h1>
+            <div class="card mission-card">
+                <h2>Our Story</h2>
+                <p>BookBridge was created by a team of passionate developers and book lovers who wanted to make literature more accessible to everyone. Our team consists of four members, each bringing their unique skills and perspectives to the project.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="card mission-card">
+                <h3>Making Books Accessible</h3>
+                <p>Our mission is to make books accessible to everyone, regardless of their financial situation. We believe that everyone should have the opportunity to read and learn from books.</p>
+                
+                <h3>Building Community</h3>
+                <p>We're not just about sharing books; we're about building a community of readers who can connect, discuss, and learn from each other.</p>
+                
+                <h3>Promoting Literacy</h3>
+                <p>By making books more accessible, we're helping to promote literacy and education in our communities.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="~/img/priyanka.png" alt="Priyanka">
+                    <h3>Priyanka</h3>
+                    <p>Frontend Developer</p>
+                    <p>Priyanka is responsible for the user interface and experience of BookBridge. She ensures that the platform is intuitive and easy to use for all users.</p>
+                </div>
+                <div class="team-member">
+                    <img src="~/img/hriday.png" alt="Hriday">
+                    <h3>Hriday</h3>
+                    <p>Data Visualization Specialist</p>
+                    <p>Hriday creates the interactive charts and visualizations that help users understand book trends and statistics. He has a passion for making data accessible and engaging.</p>
+                </div>
+                <div class="team-member">
+                    <img src="~/img/gopi.png" alt="Gopi">
+                    <h3>Gopi</h3>
+                    <p>Backend Developer</p>
+                    <p>Gopi handles the server-side logic and database management for BookBridge. He ensures that the platform runs smoothly and efficiently.</p>
+                </div>
+                <div class="team-member">
+                    <img src="~/img/aiman.png" alt="Umeaiman">
+                    <h3>Umeaiman</h3>
+                    <p>CRUD Operations Specialist</p>
+                    <p>Umeaiman is responsible for implementing the Create, Read, Update, and Delete operations for books in the system. She ensures that users can easily manage their book collections.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Logical Data Model</h2>
+            <div class="data-model">
+                <img src="~/img/data-model.png" alt="Logical Data Model">
+            </div>
+            <div class="card mission-card">
+                <h3>Data Relationships</h3>
+                <p>The BookBridge database is built on a well-structured relational model to support efficient tracking and interaction:</p>
+                <ul>
+                    <li><strong>Users → Books:</strong> A single user can list multiple books for sharing.</li>
+                    <li><strong>Books → Borrow Records:</strong> Each book can be borrowed multiple times, with every instance recorded.</li>
+                    <li><strong>Users → Borrow Records:</strong> Each borrow record links both the borrower and the owner.</li>
+                    <li><strong>Books → Reviews:</strong> Multiple users can review the same book, providing feedback and ratings.</li>
+                    <li><strong>Users → Reviews:</strong> Users can write reviews for different books they have interacted with.</li>
+                    <li><strong>Books → Book Images:</strong> Each book can have multiple images, with one marked as primary.</li>
+                    <li><strong>Users → Preferences:</strong> Each user has a single preferences record storing favorite genres and notification settings.</li>
+                </ul>
+                <p>This relational setup enables BookBridge to handle user activity, book details, borrowing history, visual content, and personalized experiences effectively.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">GitHub Repository</h2>
+            <div class="card mission-card">
+                <p>Our project is open-source and available on GitHub. You can find the repository at:</p>
+                <p><a href="https://github.com/bookbridge" target="_blank">https://github.com/bookbridge</a></p>
+                <p>Feel free to contribute, report issues, or suggest improvements!</p>
+            </div>
+        </section>
+    </div>
+</main>
