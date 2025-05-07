@@ -9,67 +9,69 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookBridgeApp
 build_property.RootNamespace = BookBridgeApp
-build_property.ProjectDir = /Users/jokerfox6091/Desktop/code/BooksBridgeApp/
+build_property.ProjectDir = C:\Users\hrida\Source\Repos\BooksBridgeApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 8.0
+build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/jokerfox6091/Desktop/code/BooksBridgeApp
+build_property.MSBuildProjectDirectory = C:\Users\hrida\Source\Repos\BooksBridgeApp
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/About/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXQvSW5kZXguY3NodG1s
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Charts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvQ2hhcnRzLmNzaHRtbA==
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Books/Charts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ2hhcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvQ3JlYXRlLmNzaHRtbA==
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Books/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGVsZXRlLmNzaHRtbA==
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Books/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Read.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvUmVhZC5jc2h0bWw=
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Books/Read.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcUmVhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvVXBkYXRlLmNzaHRtbA==
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Books/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Home/DataVisualization.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYXRhVmlzdWFsaXphdGlvbi5jc2h0bWw=
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Home/DataVisualization.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXRhVmlzdWFsaXphdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-4tfvpswo65
+[C:/Users/hrida/Source/Repos/BooksBridgeApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-0rgt8bu48j
