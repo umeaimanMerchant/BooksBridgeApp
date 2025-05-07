@@ -1,0 +1,104 @@
+@{
+    ViewBag.Title = "Book Data Visualizations";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Library Statistics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            max-width: 600px;
+            max-height: 400px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Genre Distribution</h2>
+    <canvas id="genreChart"></canvas>
+
+    <h2>Condition Distribution</h2>
+    <canvas id="conditionChart"></canvas>
+
+    <h2>Availability Distribution</h2>
+    <canvas id="availabilityChart"></canvas>
+
+    <script>
+        // Seeded random function (deterministic random based on seed)
+        function seededRandom(seed) {
+            return function() {
+                var x = Math.sin(seed++) * 10000;
+                return x - Math.floor(x);
+            };
+        }
+
+        // Function to generate consistent random colors
+        function getRandomColors(count, seed) {
+            const random = seededRandom(seed);
+            const colors = [];
+            for (let i = 0; i < count; i++) {
+                const r = Math.floor(random() * 255);
+                const g = Math.floor(random() * 255);
+                const b = Math.floor(random() * 255);
+                colors.push(`rgba(${r}, ${g}, ${b}, 0.6)`);
+            }
+            return colors;
+        }
+
+        const genreLabels = @Html.Raw(ViewBag.GenreLabelsJson);
+        const genreCounts = @Html.Raw(ViewBag.GenreCountsJson);
+        const conditionLabels = @Html.Raw(ViewBag.ConditionLabelsJson);
+        const conditionCounts = @Html.Raw(ViewBag.ConditionCountsJson);
+        const availabilityLabels = @Html.Raw(ViewBag.AvailabilityLabelsJson);
+        const availabilityCounts = @Html.Raw(ViewBag.AvailabilityCountsJson);
+
+        // Generate the same set of colors using a fixed seed
+        const seed = 123;  // You can change this seed to get different colors, but it will be consistent every time
+
+        const genreData = {
+            labels: genreLabels,
+            datasets: [{
+                label: 'Genres',
+                data: genreCounts,
+                backgroundColor: getRandomColors(genreLabels.length, seed)
+            }]
+        };
+
+        const conditionData = {
+            labels: conditionLabels,
+            datasets: [{
+                label: 'Condition',
+                data: conditionCounts,
+                backgroundColor: getRandomColors(conditionLabels.length, seed + 1)  // Modify seed to change color pattern
+            }]
+        };
+
+        const availabilityData = {
+            labels: availabilityLabels,
+            datasets: [{
+                label: 'Availability',
+                data: availabilityCounts,
+                backgroundColor: getRandomColors(availabilityLabels.length, seed + 2)  // Modify seed to change color pattern
+            }]
+        };
+
+        new Chart(document.getElementById('genreChart'), {
+            type: 'bar',
+            data: genreData
+        });
+
+        new Chart(document.getElementById('conditionChart'), {
+            type: 'pie',
+            data: conditionData
+        });
+
+        new Chart(document.getElementById('availabilityChart'), {
+            type: 'doughnut',
+            data: availabilityData
+        });
+    </script>
+</body>
+</html>

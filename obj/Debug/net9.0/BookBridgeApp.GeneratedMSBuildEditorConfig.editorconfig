@@ -9,69 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookBridgeApp
 build_property.RootNamespace = BookBridgeApp
-build_property.ProjectDir = /Users/umeaimanmerchant/Downloads/BookBridgeApp-master/
+build_property.ProjectDir = /Users/jokerfox6091/Desktop/code/BooksBridgeApp/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 9.0
+build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/umeaimanmerchant/Downloads/BookBridgeApp-master
+build_property.MSBuildProjectDirectory = /Users/jokerfox6091/Desktop/code/BooksBridgeApp
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 9.0
-build_property.EnableCodeStyleSeverity = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/About/Index.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Books/Charts.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Charts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvQ2hhcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Books/Create.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Books/Delete.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Books/Read.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Read.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvUmVhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Books/Update.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Books/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Home/DataVisualization.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Home/DataVisualization.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYXRhVmlzdWFsaXphdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Home/Index.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Home/Privacy.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Shared/Error.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/_ViewImports.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/_ViewStart.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/Views/Shared/_Layout.cshtml]
+[/Users/jokerfox6091/Desktop/code/BooksBridgeApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4tfvpswo65
