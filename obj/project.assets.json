@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/umeaimanmerchant/.nuget/packages/": {}
+    "/Users/priyankajammu/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/BookBridgeApp.csproj",
+      "projectUniqueName": "/Users/priyankajammu/BooksBridgeApp1/BookBridgeApp.csproj",
       "projectName": "BookBridgeApp",
-      "projectPath": "/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/BookBridgeApp.csproj",
-      "packagesPath": "/Users/umeaimanmerchant/.nuget/packages/",
-      "outputPath": "/Users/umeaimanmerchant/Downloads/BookBridgeApp-master/obj/",
+      "projectPath": "/Users/priyankajammu/BooksBridgeApp1/BookBridgeApp.csproj",
+      "packagesPath": "/Users/priyankajammu/.nuget/packages/",
+      "outputPath": "/Users/priyankajammu/BooksBridgeApp1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/umeaimanmerchant/.nuget/NuGet/NuGet.Config"
+        "/Users/priyankajammu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
